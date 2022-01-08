@@ -1,32 +1,35 @@
 import React, { useState } from "react";
 import CrudForm from "./CrudForm";
 import CrudTable from "./CrudTable";
+import { Navbar } from "./Navbar";
+
+
 
 const initialDb = [
   {
     id: 1,
-    name: "Seiya",
-    constellation: "Pegaso",
+    name: "Yeikol",
+    lastname: "Villalobos",
   },
   {
     id: 2,
-    name: "Shiryu",
-    constellation: "Dragón",
+    name: "Naruto",
+    lastname: "Uzumaki",
   },
   {
     id: 3,
-    name: "Hyoga",
-    constellation: "Cisne",
+    name: "Luffy",
+    lastname: "Monkey D",
   },
   {
     id: 4,
-    name: "Shun",
-    constellation: "Andrómeda",
+    name: "Pablo",
+    lastname: "Gatgens",
   },
   {
     id: 5,
-    name: "Ikki",
-    constellation: "Fénix",
+    name: "Melissa",
+    lastname: "Mora",
   },
 ];
 
@@ -60,7 +63,7 @@ const CrudApp = () => {
 
   return (
     <div>
-      <h2>CRUD App React</h2>
+      <Navbar/>       
       <article className="grid-1-2">
         <CrudForm
           createData={createData}
@@ -74,6 +77,8 @@ const CrudApp = () => {
           deleteData={deleteData}
         />
       </article>
+      <a href="https://github.com/yeikol2703" className="link-github"> Yeikol Villalobos <i class="bi bi-github"></i></a>
+
     </div>
   );
 };

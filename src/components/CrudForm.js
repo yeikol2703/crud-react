@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const initailForm = {
   name: "",
-  constellation: "",
+  lastname: "",
   id: null,
 };
 
@@ -27,7 +27,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!form.name || !form.constellation) {
+    if (!form.name || !form.lastname) {
       alert("Datos incompletos");
       return;
     }
@@ -47,8 +47,8 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   };
 
   return (
-    <div>
-      <h3>{dataToEdit ? "Editar" : "Agregar"}</h3>
+    <div className="card text-center">
+      <h3 className="card-header">{dataToEdit ? "Editar" : "Agregar"}</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -59,13 +59,13 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
         />
         <input
           type="text"
-          name="constellation"
-          placeholder="Constelación"
+          name="lastname"
+          placeholder="Apellido"
           onChange={handleChange}
-          value={form.constellation}
+          value={form.lastname}
         />
-        <input type="submit" value="Enviar" />
-        <input type="reset" value="Limpiar" onClick={handleReset} />
+        <input className="btn btn-success" type="submit" value="Enviar" />
+        <input className="btn btn-danger" type="reset" value="Limpiar" onClick={handleReset} />
       </form>
     </div>
   );

@@ -1,5 +1,6 @@
-html {
-  background-color: rgb(240, 210, 200);
+html, body {
+  background-image: url("https://media.giphy.com/media/YqhIK6Gbor6CLeloBq/giphy.gif");
+  background-size: cover;
   box-sizing: border-box;
   font-size: 16px;
   font-family: sans-serif;
@@ -11,6 +12,20 @@ html {
   box-sizing: inherit;
 }
 
+.card{
+  margin: 2rem;
+}
+
+.link-github{
+  color: #fff;
+  text-decoration: none;
+  font-size: 3rem;
+  text-align: center;
+}
+.link-github i{
+  font-size:5rem;
+  color:green;
+}
 input[type="text"],
 input[type="email"],
 textarea {
@@ -39,8 +54,6 @@ input[type="reset"] {
   padding: 0.5rem 1rem;
   margin: 0 0.5rem 0 0;
   display: inline-block;
-  background-color: #eee;
-  color: #444;
   font-weight: bold;
   font-size: 1rem;
   line-height: 1;
